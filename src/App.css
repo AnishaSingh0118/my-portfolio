@@ -1,0 +1,170 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.nav a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+  background-color: #bb86fc;
+  color: white;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+  z-index: 2;
+  margin-left: 5%;
+  text-align: left;
+}
+
+.intro {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.name {
+  font-size: 3rem;
+  margin: 0;
+  color: #bb86fc;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end);
+}
+
+.descriptionhome {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+}
+
+.social-icons a {
+  margin-right: 20px;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 34px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #bb86fc;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; /* Adjust this line */
+  align-items: center; /* Add this line */
+}
+
+
+.image-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite; /* Add animation property */
+  margin-right: 25%;
+}
+
+.your-image-class {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-name {
+  font-size: 3rem;
+  margin: 0;
+  color: #bb86fc;
+  position: absolute;
+  top: 0; /* Adjusted to 0 */
+  left: 20px; /* Adjust the left position */
+  animation: slideInUp 2s ease-in-out;
+}
+
+/* Define the animation for the text */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%); /* Move from bottom to center */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to top */
+  }
+}
+
+/* Define the floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}

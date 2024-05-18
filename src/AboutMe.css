@@ -1,0 +1,264 @@
+.about-container {
+  color: white;
+  background-color: #121212;
+  padding: 40px 20px;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-height: 100vh; /* Center the top section vertically */
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.your-image-class {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brief {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-name {
+  font-size: 3rem;
+  color: #bb86fc;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  text-align: left;
+  margin-left: 20%;
+}
+
+.description .highlight {
+  color: #bb86fc;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-stack, .social-metrics {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.tech-stack.animate, .social-metrics.animate {
+  animation: fadeIn 1s forwards;
+}
+
+.tech-stack {
+  margin-top: 100px; /* Add more space above the tech stack section */
+  text-align: center;
+  font-size: 40px;
+}
+
+.tech-stack h2, .social-metrics h2 {
+  font-size: 2rem;
+  color: #bb86fc;
+  margin-bottom: 20px;
+}
+
+.tech-stack h3 {
+  font-size: 1.5rem;
+  color: #bb86fc;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tech-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tech-box {
+  background-color: #292929;
+  padding: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.tech-box:hover {
+  transform: scale(1.05);
+}
+
+.tech-box.react:hover {
+  background-color: #61dafb;
+}
+
+.tech-box.javascript:hover {
+  background-color: #f0db4f;
+}
+
+.tech-box.aws:hover {
+  background-color: #ff9900;
+}
+
+.tech-box.gcp:hover {
+  background-color: #4285f4;
+}
+
+.tech-box.docker:hover {
+  background-color: #0db7ed;
+}
+
+.tech-box.kubernetes:hover {
+  background-color: #326ce5;
+}
+
+.tech-box.terraform:hover {
+  background-color: #623ce4;
+}
+
+.tech-box.serverless:hover {
+  background-color: #fd5750;
+}
+
+.tech-box.python:hover {
+  background-color: #3776ab;
+}
+
+.tech-box.flutter:hover {
+  background-color: #02569b;
+}
+
+.tech-box.dart:hover {
+  background-color: #0175c2;
+}
+
+.tech-box.figma:hover {
+  background-color: #a259ff;
+}
+
+.tech-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.metric-bar {
+  margin-bottom: 20px;
+  color: #b0b0b0;
+}
+
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: #292929;
+  border-radius: 10px;
+}
+
+.fill {
+  height: 100%;
+  background-color: #bb86fc;
+  width: 0;
+  transition: width 1s;
+}
+
+.fill-animate {
+  width: 80%;
+}
+
+.metric-bar {
+  margin-bottom: 20px;
+  color: #b0b0b0;
+  position: relative; /* Add position relative to create the context for pseudo elements */
+  margin-top: 8%;
+  
+}
+
+.bar {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #f3f3f3; /* Light grey background */
+  border-radius: 10px;
+  overflow: hidden; /* Hide overflowing pseudo elements */
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+  animation: flow 2s infinite linear;
+}
+
+.bar:after {
+  left: auto;
+  right: -50%;
+  transform: rotateY(180deg); /* Reverse the animation flow */
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.metric-text {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif; /* Change the font family */
+}
+
+.metric-text.linkedin {
+  font-size: 20px; /* Change the font size for LinkedIn */
+  font-weight: bold; /* Change the font style for LinkedIn */
+}
+
+.metric-text.twitter {
+  font-size: 20px; /* Change the font size for Twitter */
+  font-weight: bold; /* Change the font weight for Twitter */
+  font-family: 'Arial', sans-serif; /* Change the font family for Twitter */
+}

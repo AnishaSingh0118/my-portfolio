@@ -1,0 +1,185 @@
+/* Resume.css */
+
+.resume-container {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.download-btn {
+    background-color: #6a0dad; /* Dark purple */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0; /* Added top margin */
+    font-size: 16px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.download-btn:hover {
+    transform: scale(1.1);
+    background-color: #8a2be2; /* Lighter purple */
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.timeline-item {
+    padding: 20px 0;
+    position: relative;
+    width: 50%;
+    opacity: 0; /* Start hidden */
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: left;
+    transform: translateX(-100%); /* Start off-screen */
+    animation: slideInLeft 1s forwards, float 4s ease-in-out infinite; /* Continuous animation */
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: right;
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideInRight 1s forwards, float 4s ease-in-out infinite; /* Continuous animation */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #ff8c00, #ff4500); /* Gradient border color */
+    border-image-slice: 1;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.left::before {
+    left: -10px;
+}
+
+.timeline-item.right::before {
+    right: -10px;
+}
+
+.timeline-item .timeline-content {
+    padding: 20px;
+    background: #333; /* Different color for the boxes */
+    position: relative;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #ff8c00, #ff4500); /* Gradient border color */
+    border-image-slice: 1;
+}
+
+.timeline-item.left .timeline-content {
+    margin-left: 30px;
+}
+
+.timeline-item.right .timeline-content {
+    margin-right: 30px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background: linear-gradient(135deg, #ff8c00, #ff4500); /* Gradient middle line color */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1.5px;
+}
+
+.timeline-item.left::after {
+    left: auto;
+    right: -1.5px;
+}
+
+.timeline-item.right::after {
+    left: -1.5px;
+    right: auto;
+}
+
+/* Scroll Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Different hover colors for each box */
+.timeline-item:nth-child(odd) .timeline-content:hover {
+    background: #4D869C; /* Blue hover color for odd items */
+    transform: scale(1.05);
+}
+
+.timeline-item:nth-child(even) .timeline-content:hover {
+    background: #d9a49a; /* Red hover color for even items */
+    transform: scale(1.05);
+}
+
+.timeline-item:nth-child(3n) .timeline-content:hover {
+    background: #AD88C6; /* Purple hover color for every third item */
+    transform: scale(1.05);
+}
+
+.timeline-item:nth-child(4n) .timeline-content:hover {
+    background: #C3FF93; /* Light blue hover color for every fourth item */
+    transform: scale(1.05);
+}
+
+/* Bullet points for descriptions */
+.timeline-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
+
+.timeline-content li {
+    margin-bottom: 10px;
+}

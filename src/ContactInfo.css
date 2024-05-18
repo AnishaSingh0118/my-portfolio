@@ -1,0 +1,83 @@
+/* Updated ContactInfo.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Updated ContactInfo.css */
+
+/* Updated ContactInfo.css */
+
+.card {
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #10439F, #1976d2); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+  }
+    
+  
+  .card:hover {
+    transform: translateY(-5px); /* Move the card up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+  }
+  
+  .contact-container {
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 30px;
+  }
+  
+  .form-group label, .form-group input, .form-group textarea {
+    color: #fff;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: calc(100% - 24px);
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  button[type="submit"] {
+    background-color: #fff;
+    color: #007bff;
+    padding: 12px 30px;
+    font-size: 18px;
+    border: 2px solid #fff; /* Add border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
